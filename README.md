@@ -7,6 +7,17 @@
 5) В /models положить [ggml-large-v3-turbo.bin](https://huggingface.co/ggerganov/whisper.cpp/blob/main/ggml-large-v3-turbo.bin) скачав со странички https://huggingface.co/ggerganov/whisper.cpp/tree/main
 6) Убедиться что есть файл [ggml-silero-v5.1.2.bin](models/ggml-silero-v5.1.2.bin), он хорошо обрабатывает тишину (чтоб транскрибатор не выдавал лишние слова когда молчат)
 
+# альтернатива
+```
+Images @https://github.com/ggml-org/whisper.cpp
+We have two Docker images available for this project:
+
+ghcr.io/ggml-org/whisper.cpp:main: This image includes the main executable file as well as curl and ffmpeg. (platforms: linux/amd64, linux/arm64)
+ghcr.io/ggml-org/whisper.cpp:main-cuda: Same as main but compiled with CUDA support. (platforms: linux/amd64)
+ghcr.io/ggml-org/whisper.cpp:main-musa: Same as main but compiled with MUSA support. (platforms: linux/amd64)
+```
+
+
 # debug console:
 
 ```

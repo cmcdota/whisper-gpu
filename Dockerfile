@@ -20,7 +20,7 @@ ENV LD_LIBRARY_PATH=/usr/local/cuda/lib64/stubs:/usr/local/cuda/lib64:$LD_LIBRAR
 ENV LIBRARY_PATH=/usr/local/cuda/lib64/stubs:/usr/local/cuda/lib64:$LIBRARY_PATH
 
 # Сборка whisper.cpp с API и CUDA
-RUN git clone https://github.com/ggerganov/whisper.cpp.git . && \
+RUN git clone https://github.com/ggml-org/whisper.cpp . && \
     cmake -B build \
           -DGGML_CUDA=1 \
           -DWHISPER_BUILD_SERVER=ON \
