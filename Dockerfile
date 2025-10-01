@@ -34,6 +34,7 @@ FROM nvidia/cuda:${CUDA_VERSION}-runtime-ubuntu${UBUNTU_VERSION}
 
 WORKDIR /app
 
+#Хорошо бы установить ffmpeg чтобы работала опция --convert. Насчет установки wget не уверен что он нужен.
 RUN apt-get update && \
     apt-get install -y ffmpeg wget && \
     rm -rf /var/lib/apt/lists/*
